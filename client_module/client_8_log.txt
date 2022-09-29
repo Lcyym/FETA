@@ -1,0 +1,26 @@
+{'model_type': 'AlexNet', 'dataset_type': 'CIFAR10', 'batch_size': 32, 'data_pattern': 0, 'lr': 0.1, 'decay_rate': 0.993, 'min_lr': 0.001, 'epoch': 500, 'momentum': -1, 'weight_decay': 0.0}
+1000
+4000
+Files already downloaded and verified
+Files already downloaded and verified
+class counts:  [100. 100. 100. 100. 100. 100. 100. 100. 100. 100.]
+total data count:  1000.0
+***
+teachers' acc in val: 0.1
+compute label time: 0.9745955467224121
+prediction_results len: 4000
+num of selected samples:  0
+epoch-1 lr: 0.1
+local steps:  25
+after aggregation, epoch: 1, train loss: 2.3038548851013183, test loss: 2.302654349517822, test accuracy: 0.1
+send para
+Traceback (most recent call last):
+  File "client.py", line 386, in <module>
+    main()
+  File "client.py", line 153, in main
+    send_model_para(local_model,master_socket)
+  File "client.py", line 314, in send_model_para
+    send_data_socket(local_paras, master_socket)
+  File "/data/ymliao/PS_semi_LabelAtClient_grow_cifar10/client_module/client_comm_utils.py", line 49, in send_data_socket
+    s.sendall(data)
+BrokenPipeError: [Errno 32] Broken pipe
